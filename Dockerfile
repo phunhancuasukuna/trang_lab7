@@ -4,10 +4,10 @@ FROM openjdk:24-jdk-slim AS base
 RUN apt-get update && apt-get install -y wget tar && rm -rf /var/lib/apt/lists/*
 
 # Cài Tomcat 
-RUN wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.100/bin/apache-tomcat-9.0.100.tar.gz \
-    && tar xzf apache-tomcat-9.0.100.tar.gz \
-    && mv apache-tomcat-9.0.100 /usr/local/tomcat \
-    && rm apache-tomcat-9.0.100.tar.gz
+RUN wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.112/bin/apache-tomcat-9.0.112.tar.gz \
+    && tar xzf apache-tomcat-9.0.112.tar.gz \
+    && mv apache-tomcat-9.0.112 /usr/local/tomcat \
+    && rm apache-tomcat-9.0.112.tar.gz
 
 ENV CATALINA_HOME=/usr/local/tomcat
 ENV PATH="$CATALINA_HOME/bin:$PATH"
