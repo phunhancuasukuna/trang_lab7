@@ -14,7 +14,7 @@ ENV PATH="$CATALINA_HOME/bin:$PATH"
 
 # Copy war vào Tomcat
 RUN rm -rf /usr/local/tomcat/webapps/*
-COPY ch07_ex3_carl.war /usr/local/tomcat/webapps/ROOT.war
+COPY ch07_ex3_cart.war /usr/local/tomcat/webapps/ROOT.war
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
